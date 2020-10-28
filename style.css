@@ -1,0 +1,130 @@
+* {
+	margin: 0;
+	padding: 0;
+	color: #232b2b;
+}
+ul {
+	list-style: none;
+}
+
+body {
+	width: 100vw;
+	background: #faf0e6;
+/*	display: flex;
+	justify-content: center;
+	align-items: center;*/
+}
+
+/*header*/
+header{
+	width: 800px;
+	height: 500px;
+	margin: auto;
+	position: relative;
+	background-image: url("IMG_2822.JPG");
+	background-size: cover;
+}
+
+.bg_test-text{
+	display: inline-block;/* インラインブロックにする */
+	padding: 20px 30px;/*余白指定 */
+	background-color: rgba(255, 255, 255, 0.3);/* 背景色指定 */
+	color: #d2b48c;
+	font-size: 45px;
+	font-family: 'Londrinas Shadow', cursive;
+	font-weight: 10px;
+}
+
+.bg_test{
+	text-align: center;
+	padding:  100px;
+}
+
+/*main*/
+main{
+	flex: 1;
+}
+
+.container {
+	background: #fff;
+	padding: 1em 2em;
+	width: 50%;
+	margin: 30px auto;
+	box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.7);
+}
+}
+
+h1 {
+	text-align: center;
+	color: #8b4513;
+	font-size: 20px;
+	font-family: 'Londrinas Shadow', cursive;
+}
+
+form {
+	width: 100%;
+	height: 36px;
+	display: flex;
+	margin: 30px auto 20px;
+}
+input[type="text"] {
+	width: 75%;
+	padding: 3px 7px;
+	border: 1px solid #232b2b;
+	border-radius: 3px 0 0 3px;
+}
+
+#btn {
+	width: 25%;
+	padding: 5px;
+	background-color: #f5deb3;
+	color: white;
+	border: 0.5px solid;
+	border-color: #f5deb3;
+	border-radius: 0 3px 3px 0;
+	cursor: pointer;
+
+}
+
+.todo-list {
+	width: 100%;
+	border-radius: 3px;
+
+}
+
+/* 追加されるリストアイテムのCSS */
+li {
+	height: 30px;
+	border: 1px solid rgb(187, 187, 187);
+	border-bottom: none;
+	padding: 3px 11px;
+	display: flex;
+	align-items: center;
+	/* ボタンが追加された時、タスクの内容とボタンを左右に配置 */
+	justify-content: space-between;
+}
+/* 最後のli要素のみ、border-bottomがある */
+li:last-child {
+	border-bottom: 1px solid rgb(187, 187, 187);
+}
+/* 追加されるリストアイテムのDeleteボタン */
+.delete {
+	font-size: 12px;
+	color: rgb(202, 20, 20);
+	cursor: pointer;
+}
+
+
+/*レスポンシブ対応*/
+/*
+@media screen and (max-width: 480px){
+	body, nav, aside{
+		width: 100%;
+	}
+	div {
+		flex-direction: column;
+	}
+	main {
+		order: -1;
+	}
+*/
