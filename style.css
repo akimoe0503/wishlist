@@ -9,7 +9,11 @@ ul {
 
 body {
 	width: 100vw;
-	background: #faf0e6;
+	background-image: url("7c67b.jpg");
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: rgba(0,30,50,0.10);
 /*	display: flex;
 	justify-content: center;
 	align-items: center;*/
@@ -17,19 +21,17 @@ body {
 
 /*header*/
 header{
-	width: 800px;
-	height: 500px;
+	height: 200px;
 	margin: auto;
 	position: relative;
-	background-image: url("IMG_2822.JPG");
-	background-size: cover;
 }
 
 .bg_test-text{
+	width: 50%;
 	display: inline-block;/* インラインブロックにする */
-	padding: 20px 30px;/*余白指定 */
+	padding: 40px 40px;/*余白指定 */
 	background-color: rgba(255, 255, 255, 0.3);/* 背景色指定 */
-	color: #d2b48c;
+	color: #d7e2ec;
 	font-size: 45px;
 	font-family: 'Londrinas Shadow', cursive;
 	font-weight: 10px;
@@ -37,7 +39,7 @@ header{
 
 .bg_test{
 	text-align: center;
-	padding:  100px;
+	padding:  40px;
 }
 
 /*main*/
@@ -52,12 +54,12 @@ main{
 	margin: 30px auto;
 	box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.7);
 }
-}
 
 h1 {
+	margin-top: 30px;
 	text-align: center;
-	color: #8b4513;
-	font-size: 20px;
+	color: #c0c0c0;
+	font-size: 25px;
 	font-family: 'Londrinas Shadow', cursive;
 }
 
@@ -70,17 +72,17 @@ form {
 input[type="text"] {
 	width: 75%;
 	padding: 3px 7px;
-	border: 1px solid #232b2b;
+	border: 1px solid #a9a9a9;
 	border-radius: 3px 0 0 3px;
 }
 
 #btn {
 	width: 25%;
 	padding: 5px;
-	background-color: #f5deb3;
+	background-color: #a9a9a9;
 	color: white;
 	border: 0.5px solid;
-	border-color: #f5deb3;
+	border-color: #696969;
 	border-radius: 0 3px 3px 0;
 	cursor: pointer;
 
