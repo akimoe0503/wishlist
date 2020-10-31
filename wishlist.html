@@ -6,6 +6,8 @@
 	<title>My Wish List</title>
 	<link rel="stylesheet" type="text/css" href="reset.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://kit.fontawesome.com/12f954cd39.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
 <!-- header -->
@@ -20,12 +22,30 @@
 			<h1>If my dreams come true,
 			I will be happy</h1>
 			<form>
-				<input type="text" id="input" placeholder="Add your task here">
+				<input type="text" id="input" placeholder="Add your dream here">
 				<input type="button" id="btn" value="Add">
 			</form>
-			<ul class="todo-list">
-				<!-- ここに要素が追加されていく -->
-			</div>
+			<!-- 未完成リスト -->
+			<h2 class="title">Your dream</h2>
+			<ul class="todo-list" id="Not-yet">
+			<!-- 下記に要素が追加されていく -->
+<!-- 				<div>
+					<li>わ</li>
+					<li>あ</li>
+					<li>え</li>
+				<button class="remove">
+					<i class="fas fa-trash-alt fa-lg"></i>
+				</button>
+				<button class="done">
+					<i class="far fa-check-square fa-lg"></i>
+				</button>
+				</div> -->
+			</ul>
+			<!-- 完了済みリスト -->
+			<h2 class="title">Dream come true</h2>
+			<ul id="Done">
+			</ul>
+		</div>
 	</main>
 	<script src="./main.js"></script>
 </body>

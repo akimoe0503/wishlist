@@ -14,6 +14,7 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-color: rgba(0,30,50,0.10);
+	font-family: 'Roboto', sans-serif;
 /*	display: flex;
 	justify-content: center;
 	align-items: center;*/
@@ -68,22 +69,24 @@ form {
 	height: 36px;
 	display: flex;
 	margin: 30px auto 20px;
+	justify-content: space-between;
 }
+
 input[type="text"] {
 	width: 75%;
 	padding: 3px 7px;
 	border: 1px solid #a9a9a9;
-	border-radius: 3px 0 0 3px;
+	border-radius: 5px;
 }
 
 #btn {
-	width: 25%;
+	width: 20%;
 	padding: 5px;
 	background-color: #a9a9a9;
 	color: white;
 	border: 0.5px solid;
 	border-color: #696969;
-	border-radius: 0 3px 3px 0;
+	border-radius: 5px;
 	cursor: pointer;
 
 }
@@ -93,6 +96,15 @@ input[type="text"] {
 	border-radius: 3px;
 
 }
+ /*リスト*/
+
+.title {
+  margin: 15px 0;
+  padding-left: 3%;
+  color: #777;
+}
+
+
 
 /* 追加されるリストアイテムのCSS */
 li {
@@ -104,17 +116,56 @@ li {
 	align-items: center;
 	/* ボタンが追加された時、タスクの内容とボタンを左右に配置 */
 	justify-content: space-between;
+	font-size: 15px;
+	color: #444;
 }
+
 /* 最後のli要素のみ、border-bottomがある */
 li:last-child {
-	border-bottom: 1px solid rgb(187, 187, 187);
+	border-bottom: 2px solid rgb(187, 187, 187);
 }
+
+/* 線の間の境界線 */
+.done::before {
+  content: '';
+  width: 1px;
+  height: 30px;
+  background: #edf0f1;
+
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+
+
 /* 追加されるリストアイテムのDeleteボタン */
 .delete {
 	font-size: 12px;
 	color: rgb(202, 20, 20);
 	cursor: pointer;
 }
+
+/* 完了済み一覧 */
+
+/* 未完了がないときの文字 */
+#not-yet:empty:after {
+  content: 'You have to make your dream !';
+}
+
+/* 完了がないときの文字 */
+#done:empty:after {
+  content: 'Do not give up...!';
+}
+
+ul.list#not-yet:after,
+ul.list#done:after {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+}
+
 
 
 /*レスポンシブ対応*/

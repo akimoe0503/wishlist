@@ -40,35 +40,68 @@ if(input_text != ''){
 	// li <li class='list'>入力された文字</li>が入っている
 	console.log(li);
 
-	// liの中にDeleteボタンとなるdivタグを追加
-	// Deleteボタン用のdivタグを生成
-	let div_delete = document.createElement('div');
-	// div_deleteには <div></div> が入っている
+	let icon1 = document.createElement('i');
+	icon1.classList.add('fas');
+	icon1.classList.add('fa-trash-alt');
+	icon1.classList.add('fa-lg');
 
-	// divにクラス名deleteを指定
-	div_delete.classList.add('delete');
-	// div_deleteには<div class='delete'></div> が入っている
+	let icon2 = document.createElement('i');
+	icon2.classList.add('far');
+	icon2.classList.add('fa-check-square');
+	icon2.classList.add('fa-lg');
 
-	// 表示の文字は「Delete」を設定
-	div_delete.textContent = 'Delete';
-	// div_deleteには<div class='delete'>Delete</div> が入っている
+	console.log (icon1);
+
+	li.appendChild(icon2);
+	li.appendChild(icon1);
+
+// doneリスト
+
+	icon2.addEventListener('click',function(){
+
+	let done_list = document.querySelector('#Done');
+
+	// // 追加予定のliタグを生成
+	let done_li = document.createElement('li');
+	// // li <li></li>が入っている
+	// // liのclassにlistを追加
+	done_li.classList.add('list');
+	// // li <li class="list"><li>が入っている
+
+	// // 生成したliタグの文字を入力された文字(input_text)にする(代入する)
+	// done_li.textContent = li.textContent;
+	// // li <li class='list'>入力された文字</li>が入っている
+	// console.log(done_li);
+
+	done_list.appendChild(li);
+
+});
+
+	// // liの中にDeleteボタンとなるdivタグを追加
+	// // Deleteボタン用のdivタグを生成
+	// let div_delete = document.createElement('div');
+	// // div_deleteには <div></div> が入っている
+
+	// // divにクラス名deleteを指定
+	// div_delete.classList.add('delete');
+	// // div_deleteには<div class='delete'></div> が入っている
+
+	// // 表示の文字は「Delete」を設定
+	// div_delete.textContent = 'Delete';
+	// // div_deleteには<div class='delete'>Delete</div> が入っている
 
 	//Deleteボタンの処理
 	// 押された時の部分のリストが消える
 	// 押されたらDeleteボタンの親要素のli
-	div_delete.addEventListener('click',function(){
+	icon1.addEventListener('click',function(){
 		// this Deleteボタン(disタグ)
 		// this.parentElement Deleteを含んだliタグ
-		let hantai = confirm('Are you sure?');
+		let hantei = confirm('Are you sure?');
 		// OKが押されたら削除する
-		if (hantai === true){
+		if (hantei === true){
 			this.parentElement.remove();
 		}
 	});
-
-	// 生成したdivタグを親要素liに追加
-	li.appendChild(div_delete);
-	// liには、<li class="list">入力された文字<div class='delete'>Delete</div></li>が入っている
 
 
 	// 生成したliタグを親要素のulタグに追加(appendChildを使うことによりどんどん下に追加される)
@@ -80,8 +113,6 @@ if(input_text != ''){
 }
 
 });
-
-
 
 
 
