@@ -61,15 +61,15 @@ if(input_text != ''){
 
 	let done_list = document.querySelector('#Done');
 
-	// // 追加予定のliタグを生成
+	// // // 追加予定のliタグを生成
 	let done_li = document.createElement('li');
-	// // li <li></li>が入っている
+	// // // li <li></li>が入っている
 	// // liのclassにlistを追加
 	done_li.classList.add('list');
 	// // li <li class="list"><li>が入っている
 
 	// // 生成したliタグの文字を入力された文字(input_text)にする(代入する)
-	// done_li.textContent = li.textContent;
+	done_li.textContent = li.textContent;
 	// // li <li class='list'>入力された文字</li>が入っている
 	// console.log(done_li);
 

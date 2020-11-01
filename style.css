@@ -137,6 +137,10 @@ li:last-child {
   left: 0;
 }
 
+.far .fa-check-square .fa-lg{
+	margin-left: 10px;
+}
+
 
 
 /* 追加されるリストアイテムのDeleteボタン */
