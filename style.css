@@ -137,10 +137,9 @@ li:last-child {
   left: 0;
 }
 
-.far .fa-check-square .fa-lg{
-	margin-left: 10px;
+.far{
+	margin-left: 20px;
 }
-
 
 
 /* 追加されるリストアイテムのDeleteボタン */
@@ -170,7 +169,9 @@ ul.list#done:after {
   color: #aaa;
 }
 
-
+h2.{
+	background: linear-gradient(transparent 50%, #a8eaff 50%);
+}
 
 /*レスポンシブ対応*/
 /*

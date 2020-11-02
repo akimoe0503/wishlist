@@ -1,15 +1,34 @@
 // モックの、本来は動的に作る部分をコメントアウトしておく
 
-// Addボタンの処理
+// let data = ['眠気を覚ます','映画見に行く','パンケーキ食べる'];
+// let data;
+// // もしデータが保存されてたら、取り出す、そうでなければ空っぽの配列を代入しておく
+// //  取り出した中身があったら、trueと認識してくれる
 
-// Addボタンが押されたら
-// 1,入力ボタンのチェック
-// 空文字ならなにもしない
-// なにか入力されてたら、
-// 2,ulの中にliとして表示する
-// 表示するliには、右側にdeliteボタンが表示されていたいるようにする
-// 3,追加されるliはどんどん下に追加されていく
-// 4,入力欄を空にする
+// if (localStorage.getItem('todolist')){
+// 	data = JSON.parse(localStorage.getItem('todolist'));
+// }else{
+// 	data = [];
+// };
+
+// 保存されたデータを、画面に表示する
+// let displayText = data[0];
+
+// liタグを追加する
+// add_li_tag(displayText);
+// 配列の中身を取り出して、3つリストタグが表示されるようにしましょう
+
+// 	displayText = data[1];
+// add_li_tag(displayText);
+
+// 	displayText = data[2];
+// add_li_tag(displayText);
+
+
+// for (let displayText of data); {
+// 	add_li_tag(displayText);
+// }
+// Addボタンの処理
 
 // Addボタン要素の取得
 let addBtn = document.querySelector('#btn');
@@ -40,6 +59,12 @@ if(input_text != ''){
 	// li <li class='list'>入力された文字</li>が入っている
 	console.log(li);
 
+// iconのdivを作成
+	let icon_div = document.createElement('div');
+	icon_div.classList.add('icon_div');
+
+
+// Not yet リスト
 	let icon1 = document.createElement('i');
 	icon1.classList.add('fas');
 	icon1.classList.add('fa-trash-alt');
@@ -52,8 +77,10 @@ if(input_text != ''){
 
 	console.log (icon1);
 
-	li.appendChild(icon2);
-	li.appendChild(icon1);
+	icon_div.appendChild(icon1);
+	icon_div.appendChild(icon2);
+	li.appendChild(icon_div);
+
 
 // doneリスト
 
@@ -99,7 +126,7 @@ if(input_text != ''){
 		let hantei = confirm('Are you sure?');
 		// OKが押されたら削除する
 		if (hantei === true){
-			this.parentElement.remove();
+			this.parentElement.parentElement.remove();
 		}
 	});
 
