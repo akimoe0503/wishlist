@@ -124,7 +124,7 @@ if(input_text != ''){
 		let hantei = confirm('Are you sure?');
 		// OKが押されたら削除する
 		if (hantei === true){
-			this.parentElementparentElement.remove();
+			this.parentElement.parentElement.remove();
 		}
 	});
 
@@ -138,7 +138,4 @@ if(input_text != ''){
 }
 
 });
-
-
-
 
