@@ -61,7 +61,6 @@ if(input_text != ''){
 
 // iconのdivを作成
 	let icon_div = document.createElement('div');
-	icon_div.classList.add('icon_div');
 
 
 // Not yet リスト
@@ -85,15 +84,14 @@ if(input_text != ''){
 // doneリスト
 
 	icon2.addEventListener('click',function(){
-
 	let done_list = document.querySelector('#Done');
 
 	// // // 追加予定のliタグを生成
 	let done_li = document.createElement('li');
 	// // // li <li></li>が入っている
-	// // liのclassにlistを追加
+	// // liのclassにdone_listを追加
 	done_li.classList.add('list');
-	// // li <li class="list"><li>が入っている
+	// // li <li class="done_list"><li>が入っている
 
 	// // 生成したliタグの文字を入力された文字(input_text)にする(代入する)
 	done_li.textContent = li.textContent;
@@ -126,7 +124,7 @@ if(input_text != ''){
 		let hantei = confirm('Are you sure?');
 		// OKが押されたら削除する
 		if (hantei === true){
-			this.parentElement.parentElement.remove();
+			this.parentElementparentElement.remove();
 		}
 	});
 
